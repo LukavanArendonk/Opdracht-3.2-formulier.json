@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Abonnement afsluiten</title>
+
+    <style>
+        body {
+            background-color: lightgray;
+            font-family: Arial;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 400px;
+            margin: auto;
+            background-color: white;
+            padding: 20px;
+        }
+
+        input,
+        select {
+            margin-bottom: 10px;
+        }
+
+        .aanhef {
+            display: flex;
+            gap: 10px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        input[type="submit"] {
+            background-color: green;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form>
+
+        <h1>Abonnement afsluiten
+            Hallo hi
+        </h1>
+
+        <label for="voornaam">Voornaam</label>
+        <input type="text" pattern="[a-z]" required id="voornaam">
+
+        <label for="achternaam">Achternaam</label>
+        <input type="text" pattern="[a-z]" required id="achternaam">
+
+        <label>Aanhef</label>
+
+        <div class="aanhef">
+            <input type="radio" name="aanhef" value="Dhr." checked> Dhr.
+            <input type="radio" name="aanhef" value="Mevr."> Mevr.
+            <input type="radio" name="aanhef" value="Anders"> Anders
+        </div>
+
+        <label for="straat">Straat met huisnummer</label>
+        <input type="text" placeholder="Stationsweg 12" required id="straat">
+
+        <label for="postcode">Postcode</label>
+        <input type="text" placeholder="1234 AB" required id="postcode">
+
+        <label for="woonplaats">Woonplaats</label>
+        <input type="text" required id="woonplaats">
+
+        <label for="land">Land</label>
+        <select id="land" required>
+            <option value="">Kies een land</option>
+            <option value="Nederland">Nederland</option>
+            <option value="België">België</option>
+            <option value="Duitsland">Duitsland</option>
+        </select>
+
+        <label for="iban">IBAN-nummer</label>
+        <input type="text" placeholder="NL91ABNA0417164300" maxlength="18" required id="iban">
+
+        <label for="abonnement">Type abonnement</label>
+        <select id="abonnement" required>
+            <option value="">Kies een abonnement</option>
+            <option value="Mobiel">Mobiel</option>
+            <option value="Glasvezel">Glasvezel</option>
+            <option value="TV">TV</option>
+        </select>
+
+        <label for="datum">Datum van ingang abonnement</label>
+        <input type="date" id="datum" required>
+
+        <label for="looptijd">Looptijd abonnement</label>
+        <input type="number" min="1" required id="looptijd">
+
+        <label for="gebruikers">Aantal gebruikers</label>
+        <input type="number" min="0" max="4" required id="gebruikers">
+
+        <label for="email">E-mailadres</label>
+        <input type="email" required id="email">
+
+        <label for="wachtwoord">Wachtwoord aanmaken</label>
+        <input type="password" required id="wachtwoord">
+
+        <input type="submit" value="Sluit abonnement af">
+
+    </form>
+
+</body>
+
+</html>
